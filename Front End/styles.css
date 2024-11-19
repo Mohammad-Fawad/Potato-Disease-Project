@@ -1,0 +1,140 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: url("bg.jpg");
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: rgb(20, 134, 183);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Upload Section */
+.upload-section {
+  text-align: center;
+  padding: 2rem 1rem; /* Reduced padding to bring content closer to the navbar */
+  margin-top: 0;
+}
+
+.upload-card {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  display: inline-block;
+  max-width: 500px;
+  animation: fadeIn 1.5s;
+  position: relative;
+}
+
+.upload-card h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.upload-card .dropzone {
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 2rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropzone:hover {
+  background: #f7f7f7;
+}
+
+.dropzone i.upload-icon {
+  display: block;
+  font-size: 3rem;
+  color: #999;
+}
+
+.dropzone img#imagePreview {
+  display: none;
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.dropzone input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+button#predictButton {
+  background: rgb(20, 134, 183);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button#predictButton:hover {
+  background: #ff5c63;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
